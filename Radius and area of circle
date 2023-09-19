@@ -1,4 +1,4 @@
-#include<stdio.h>
+//radius and area of a circle //#include<stdio.h>
 int main()
 {
 	float radius,area;
