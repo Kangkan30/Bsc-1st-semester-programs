@@ -1,0 +1,62 @@
+// program to perform following action on an array entered by the user : 
+Print the even-valued elements//
+#include <stdio.h>
+int main() {
+    int size;
+
+    // Get the size of the array from the user
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+
+    // Declare an array of the given size
+    int array[size];
+
+    // Get array elements from the user
+    printf("Enter elements of the array separated by space: ");
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &array[i]);
+    }
+
+    // Print even-valued elements
+    printf("Even-valued elements: ");
+    for (int i = 0; i < size; i++) {
+        if (array[i] % 2 == 0) {
+            printf("%d ", array[i]);
+        }
+    }
+
+    return 0;
+}
+
+
+
+// program to perform following action on an array entered by the user : 
+Print the odd-valued elements//
+#include <stdio.h>
+
+int main() {
+    int size;
+
+    // Get the size of the array from the user
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+
+    // Declare an array of the given size
+    int array[size];
+
+    // Get array elements from the user
+    printf("Enter elements of the array separated by space: ");
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &array[i]);
+    }
+
+    // Print odd-valued elements
+    printf("Odd-valued elements: ");
+    for (int i = 0; i < size; i++) {
+        if (array[i] % 2 != 0) {
+            printf("%d ", array[i]);
+        }
+    }
+
+    return 0;
+}
