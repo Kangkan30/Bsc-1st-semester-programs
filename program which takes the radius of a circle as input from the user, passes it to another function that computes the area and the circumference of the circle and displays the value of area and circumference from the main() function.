@@ -1,0 +1,24 @@
+//Program to calculate area and circumference//
+#include <stdio.h>
+// Function to calculate area and circumference//
+void calculateCircleProperties(float radius, float *area, float *circumference) {
+    *area = 3.14159 * radius * radius;
+    *circumference = 2 * 3.14159 * radius;
+}
+
+int main() {
+    float radius, area, circumference;
+
+    // Input radius from the user
+    printf("Enter the radius of the circle: ");
+    scanf("%f", &radius);
+
+    // Calculate area and circumference
+    calculateCircleProperties(radius, &area, &circumference);
+
+    // Display the results
+    printf("Area of the circle: %.2f\n", area);
+    printf("Circumference of the circle: %.2f\n", circumference);
+
+    return 0;
+}
