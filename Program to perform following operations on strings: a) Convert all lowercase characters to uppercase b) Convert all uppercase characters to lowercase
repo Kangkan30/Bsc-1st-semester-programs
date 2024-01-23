@@ -1,0 +1,48 @@
+//Program to perform following operations on strings convert all lowercase characters to uppercase //
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char inputString[100];
+
+    // Input a string from the user
+    printf("Enter a string: ");
+    fgets(inputString, sizeof(inputString), stdin);
+
+    // Convert all lowercase characters to uppercase
+    for (int i = 0; inputString[i] != '\0'; i++) {
+        if (islower(inputString[i])) {
+            inputString[i] = toupper(inputString[i]);
+        }
+    }
+
+    // Print the modified string
+    printf("\nString with all lowercase characters converted to uppercase:\n%s", inputString);
+
+    return 0;
+}
+
+
+//Program to perform following operations on strings convert all uppercase characters to lowercase //
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char inputString[100];
+
+    // Input a string from the user
+    printf("Enter a string: ");
+    fgets(inputString, sizeof(inputString), stdin);
+
+    // Convert all uppercase characters to lowercase
+    for (int i = 0; inputString[i] != '\0'; i++) {
+        if (isupper(inputString[i])) {
+            inputString[i] = tolower(inputString[i]);
+        }
+    }
+
+    // Print the modified string
+    printf("\nString with all uppercase characters converted to lowercase:\n%s", inputString);
+
+    return 0;
+}
