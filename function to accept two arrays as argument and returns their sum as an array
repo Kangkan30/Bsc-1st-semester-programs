@@ -1,0 +1,29 @@
+//Program to accept two arrays as argument and returns their sum as an array//
+#include <stdio.h>
+
+void arraySum(const int arr1[], const int arr2[], int size, int result[]) {
+    for (int i = 0; i < size; i++) {
+        result[i] = arr1[i] + arr2[i];
+    }
+}
+
+int main() {
+    // Example arrays
+    int array1[] = {1, 2, 3, 4, 5};
+    int array2[] = {6, 7, 8, 9, 10};
+    int size = sizeof(array1) / sizeof(array1[0]);
+
+    // Array to store the sum
+    int sumArray[size];
+
+    // Calculate the sum
+    arraySum(array1, array2, size, sumArray);
+
+    // Display the result
+    printf("Sum of arrays: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", sumArray[i]);
+    }
+
+    return 0;
+}
