@@ -1,0 +1,26 @@
+//Program to find the smallest or largest of three numbers given as input//
+#include <stdio.h>
+int main() {
+    // Declare variables
+    int num1, num2, num3;
+
+    // Take input
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+
+    printf("Enter third number: ");
+    scanf("%d", &num3);
+
+    // Find and display the smallest number
+    int smallest = (num1 < num2) ? ((num1 < num3) ? num1 : num3) : ((num2 < num3) ? num2 : num3);
+    printf("Smallest: %d\n", smallest);
+
+    // Find and display the greatest number
+    int greatest = (num1 > num2) ? ((num1 > num3) ? num1 : num3) : ((num2 > num3) ? num2 : num3);
+    printf("Greatest: %d\n", greatest);
+
+    return 0;
+}
