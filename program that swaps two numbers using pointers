@@ -1,0 +1,33 @@
+//program that swaps two numbers using pointers//
+#include <stdio.h>
+// Function to swap two numbers using pointers
+void swapNumbers(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int num1, num2;
+
+    // Input two numbers from the user
+    printf("Enter the first number: ");
+    scanf("%d", &num1);
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
+
+    // Print the original numbers
+    printf("\nOriginal Numbers:\n");
+    printf("First number: %d\n", num1);
+    printf("Second number: %d\n", num2);
+
+    // Call the function to swap numbers using pointers
+    swapNumbers(&num1, &num2);
+
+    // Print the swapped numbers
+    printf("\nSwapped Numbers:\n");
+    printf("First number: %d\n", num1);
+    printf("Second number: %d\n", num2);
+
+    return 0;
+}
