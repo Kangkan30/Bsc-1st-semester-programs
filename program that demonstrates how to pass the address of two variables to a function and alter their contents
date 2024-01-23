@@ -1,0 +1,18 @@
+//program that demonstrates how to pass the address of two variables to a function and alter their contents//
+#include <stdio.h>
+void alterContents(int *ptr1, int *ptr2) {
+    *ptr1 = 10;  // Alter the contents of variable pointed by ptr1
+    *ptr2 = 20;  // Alter the contents of variable pointed by ptr2
+}
+
+int main() {
+    int num1 = 5, num2 = 15;
+
+    printf("Before alteration: num1 = %d, num2 = %d\n", num1, num2);
+
+    alterContents(&num1, &num2);
+
+    printf("After alteration: num1 = %d, num2 = %d\n", num1, num2);
+
+    return 0;
+}
