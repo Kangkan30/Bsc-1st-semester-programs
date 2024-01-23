@@ -1,0 +1,41 @@
+//program to open a file and count the number of characters and lines in the
+file//
+#include <stdio.h>
+int main() {
+    FILE *filePointer;
+    char fileName[100];
+    char ch;
+    int charCount = 0, lineCount = 0;
+
+    // Get the file name from the user
+    printf("Enter the file name: ");
+    scanf("%s", fileName);
+
+    // Open the file for reading
+    filePointer = fopen(fileName, "r");
+
+    // Check if the file exists and can be opened
+    if (filePointer == NULL) {
+        printf("Could not open the file %s for reading.\n", fileName);
+        return 1; // Exit the program with an error code
+    }
+
+    // Read the file character by character
+    while ((ch = fgetc(filePointer)) != EOF) {
+        charCount++;
+
+        // Check for newline character to count lines
+        if (ch == '\n') {
+            lineCount++;
+        }
+    }
+
+    // Close the file
+    fclose(filePointer);
+
+    // Display the results
+    printf("Number of characters in the file: %d\n", charCount);
+    printf("Number of lines in the file: %d\n", lineCount);
+
+    return 0; // Exit the program successfully
+}
