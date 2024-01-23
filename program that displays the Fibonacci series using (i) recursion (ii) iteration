@@ -1,0 +1,56 @@
+//program that displays the Fibonacci series using recursion//
+#include <stdio.h>
+
+int fibonacci(int n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+    int n, i;
+
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Series: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", fibonacci(i));
+    }
+
+    return 0;
+}
+
+
+
+//program that displays the Fibonacci series using iteration//
+#include <stdio.h>
+
+void fibonacci(int n) {
+    int first = 0, second = 1, next;
+
+    printf("Fibonacci Series: ");
+
+    for (int i = 0; i < n; i++) {
+        if (i <= 1)
+            next = i;
+        else {
+            next = first + second;
+            first = second;
+            second = next;
+        }
+        printf("%d ", next);
+    }
+}
+
+int main() {
+    int n;
+
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    fibonacci(n);
+
+    return 0;
+}
